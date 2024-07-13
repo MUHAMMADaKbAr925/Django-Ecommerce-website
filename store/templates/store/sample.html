@@ -1,0 +1,20 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+
+{% for product in products %}
+<div class="card col-lg-4" style="width: 18rem;">
+    <img class="card-img-top" src="{{product.imageURL}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.detail}}</p>
+      <a href="#" data-name="{{product.name}}" data-action="add" class="btn btn-primary ub">Add</a>
+    </div>
+  </div>
+{% endfor %}
+
+
+</div>
+{% endblock content %}
